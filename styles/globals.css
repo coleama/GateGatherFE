@@ -1,5 +1,22 @@
 @import 'bootstrap/dist/css/bootstrap.css';
 
+@font-face {
+  font-family: 'Sherwood';
+  src: url('../styles/fonts/SHERWOOD.TTF') format('truetype');
+  /* Add other font formats if needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dungeon';
+  src: url('../styles/fonts/Elan-ITC-Std-Medium.otf') format('truetype');
+  /* Add other font formats if needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 html,
 body {
   padding: 0;
@@ -18,5 +35,209 @@ a {
 }
 
 body {
-  background-color: #88effd;
+  background-image: url("../styles/images/4m0c6xhm1vib1.webp");
+}
+
+.card-container {
+  margin-bottom: 20px;
+  max-height: 600px; /* Set a fixed height for the container */
+  overflow-y: auto; /* Add a horizontal scrollbar when needed */
+  overflow-x: hidden;
+}
+
+.card-list-horizontal {
+  display: flex;
+  gap: 10px; /* Adjust the gap between cards */
+  min-width: fit-content;
+}
+.events-section {
+  display: inline-block; /* or use display: flex; if you want to align items in each section */
+  margin-right: 20px; /* Adjust margin as needed */
+}
+
+.event-container {
+  background-color: rgba(42, 31, 31, 0.9); /* Dark background color with 0.9 opacity */
+  border-radius: 10px;
+  border: 1px solid #674c4c; /* Dark border color for a fantasy feel */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  font-family: 'Dungeon', sans-serif; /* Replace with your chosen fantasy font */
+}
+
+
+.event-container h2 {
+  color: #ff3366;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.event-container h5 {
+  color: #fafafa;
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.nav-container {
+  text-align: center;
+  font-family: 'Dungeon', sans-serif; /* Replace with your chosen fantasy font */
+}
+
+.nav-container a {
+  color: #fff; /* White text color for links */
+  text-decoration: none;
+  margin: 0 15px; /* Add margin between links */
+}
+
+.nav-container a:hover {
+  color: #ffc107; /* Change link color on hover */
+}
+
+.navbar-brand {
+  font-size: 1.5em; /* Increase brand font size */
+  font-weight: bold;
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* White color for the toggle icon */
+}
+
+.nav-logout {
+  margin-left: 15px; /* Add some margin to the Sign Out button */
+}
+
+/* Add a subtle box shadow to the Navbar */
+.navbar {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container a.active {
+  color: #ffc107; /* Highlight color for the active link */
+  font-weight: bold; /* Optionally, make the text bold for the active link */
+}
+
+.class-card .card{
+  width: 20rem;
+  height: auto;
+  margin: 10px;
+  border: 1px solid #674c4c; /* Dark border color for a fantasy feel */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  background-color: rgba(42, 31, 31, 0.9); /* Dark background color with 0.9 opacity */
+  color: #fff; /* White text color */
+  font-family: 'Dungeon', sans-serif; /* Replace with your chosen fantasy font */
+}
+
+.class-card:hover {
+  transform: scale(1.05);
+}
+
+.class-card img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 1px solid #674c4c; /* Match the border color */
+}
+
+.class-card .card-body {
+  padding: 12px;
+  text-align: center;
+}
+
+.class-card .card-title {
+  color: #ff3366; /* Accent color */
+  font-size: 18px; /* Larger font size for the title */
+  margin-bottom: 8px;
+}
+
+.class-card p {
+  color: #ddd; /* Lighter text color */
+  font-size: 16px; /* Slightly larger font size for the content */
+  margin-bottom: 0;
+}
+
+
+.event-card {
+  margin: 10px;
+}
+
+.event-card .card{
+  width: 20rem;
+  height: auto;
+  margin: 10px;
+  border: 1px solid #674c4c; /* Dark border color for a fantasy feel */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  background-color: rgba(42, 31, 31, 0.9); /* Dark background color with 0.9 opacity */
+  color: #fff; /* White text color */
+  font-family: 'Dungeon', sans-serif; /* Replace with your chosen fantasy font */
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+}
+
+.event-card .card-title {
+  color: #ff3366;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.event-card p {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.event-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.event-card li {
+  color: rgb(255, 255, 255)8f8;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.event-card .btn {
+  margin-right: 8px;
+}
+
+.event-card .btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.event-card .btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+.event-card .btn-primary:hover,
+.event-card .btn-info:hover {
+  background-color: #22b83b;
+  border-color: #22b83b;
+}
+
+.event-card .btn-primary:focus,
+.event-card .btn-info:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.h3-sherwood {
+  color: rgb(201, 151, 25);;
+  font-family: 'Dungeon', sans-serif;
+  font-weight: bold; /* Make the text bold */
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.h3-sherwood span {
+  text-decoration: none; /* Remove the border from the emoji */
+  border: none; /* Remove any potential borders */
 }
