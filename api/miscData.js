@@ -1,7 +1,7 @@
 import { dbUrl } from '../utils/auth';
 
 const getClasses = () => new Promise((resolve, reject) => {
-  fetch(`${dbUrl}/classes`, {
+  fetch(`${dbUrl}/class`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

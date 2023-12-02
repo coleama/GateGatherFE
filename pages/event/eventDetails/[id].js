@@ -27,7 +27,7 @@ export default function ViewEvent() {
     });
   };
   const add = () => {
-    addUsersToEvent(eventData.id, user.id).then(() => {
+    addUsersToEvent(user.id, eventData.id).then(() => {
       getSingleEvent(id).then(setEventData);
     });
   };

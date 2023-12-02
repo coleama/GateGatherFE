@@ -105,6 +105,33 @@ const addUsersToEvent = (userId, eventId) => new Promise((resolve, reject) => {
     .then((data) => resolve(data))
     .catch(reject);
 });
+// add class to event
+const addClassToEvent = (classId, eventId) => new Promise((resolve, reject) => {
+  fetch(`${dbUrl}/eventClass/${classId}/${eventId}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+// delete class from event
+const deleteClassFromEvent = (eventId, classId) => new Promise((resolve, reject) => {
+  fetch(`${dbUrl}/eventClass/${eventId}/${classId}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then(async (res) => {
+      let data;
+      if (res.ok) {
+        resolve(data);
+      }
+    })
+    .catch(reject);
+});
 
 // DELETE AN EVENT FROM A USER
 const deleteEventFromUser = (eventId, userId) => new Promise((resolve, reject) => {
@@ -132,4 +159,6 @@ export {
   getAllUsersOnEvent,
   addUsersToEvent,
   deleteEventFromUser,
+  addClassToEvent,
+  deleteClassFromEvent,
 };

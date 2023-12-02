@@ -41,8 +41,8 @@ body {
 .card-container {
   margin-bottom: 20px;
   max-height: 600px; /* Set a fixed height for the container */
-  overflow-y: auto; /* Add a horizontal scrollbar when needed */
-  overflow-x: hidden;
+  overflow-y: hidden; /* Add a horizontal scrollbar when needed */
+  overflow-x: auto;
 }
 
 .card-list-horizontal {
